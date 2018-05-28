@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listline"
+    android:orientation="vertical">
+
+    <include layout="@layout/title3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/orderid"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="工单号：1711070011134"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/create_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="创建时间：2017-09-01 12:00"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/statusname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="已接单"
+                    android:textColor="@color/light_blue" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/listline"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="借款人信息"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="借款人信息"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pledger_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="刘诗诗"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="身份证"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pledger_idcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="123124125145656456"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="手机号码"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pledger_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="暂无"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/listline"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="车辆信息"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="车架号"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/car_vin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="LPUIYTREW09876544"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="车牌号"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/car_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="粤B123456"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="车辆品牌"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/car_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="奥迪A4L 2017款 40 TFSI 进取型"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="车辆型号"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/car_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="车辆颜色"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/car_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="暂无"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/listline"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="安装信息"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="选择账号"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="瓜子上海门店"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="门店联系人"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/install_cont_per"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="张三"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="门店联系电话"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/install_cont_pho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="020-22222222"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="要求安装日期"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/install_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="2018-01-01"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="安装地址"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/install_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:lines="2"
+                    android:text="广东省深圳市广东省深圳市广东省深圳市广东省深圳市广东"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/listline"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="设备信息"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="选择设备"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="有线设备"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/num_yx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="无线设备"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/num_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="设备来源"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/device_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="自有库存"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="设备购买年限"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/servicelife"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxWidth="250dp"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:text="2年"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

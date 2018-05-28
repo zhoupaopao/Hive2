@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zhy_treeview">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/zhy_treeview.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

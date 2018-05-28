@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/title3" />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#dddddd">
+        
+       
+        <ImageView 
+            android:id="@+id/qr_code"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@mipmap/logo1024"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描二维码下载本软件"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/qr_code"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="45dp"		
+        android:background="#ffffff"
+        android:clickable="true" >
+
+
+        <TextView
+           	 android:id="@+id/about_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="软件版本:"
+            android:textSize="14dp" />
+        
+                <TextView
+           	 android:id="@+id/about_versions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="v1.5.0"
+            android:textSize="14dp"
+         
+            android:layout_toRightOf="@id/about_text1"/>
+        
+              <TextView
+           	 android:id="@+id/about_versions_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="已是最新版本"
+            android:textSize="14dp"
+            android:textColor="#cccccc"
+            android:layout_toRightOf="@id/about_versions"/>
+
+    </RelativeLayout>
+    
+          
+                 <ImageView
+      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+                 
+             <RelativeLayout
+       
+        android:layout_width="match_parent"
+        android:layout_height="45dp"		
+        android:background="#ffffff"
+        android:clickable="true" 
+        >
+
+
+        <TextView
+           	 android:id="@+id/about_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="联系方式:"
+            android:textSize="14dp" />
+        
+                <TextView
+           	 android:id="@+id/about_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="400-060-6708"
+            android:textSize="14dp"        
+            android:layout_toRightOf="@id/about_text2"/>
+    </RelativeLayout>    
+    
+		<!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line1" />-->
+		
+		  <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"		-->
+        <!--android:background="#ffffff"-->
+        <!--android:clickable="true" >-->
+
+
+        <!--<TextView-->
+           	 <!--android:id="@+id/about_text3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:text="紧急联系方式:"-->
+            <!--android:textSize="14dp" />-->
+        <!-- -->
+                <!--<TextView-->
+           	 <!--android:id="@+id/about_tel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:text="13775050105"-->
+            <!--android:textSize="14dp"        -->
+            <!--android:layout_toRightOf="@id/about_text3"-->
+            <!--android:autoLink="web"/>"-->
+    <!--</RelativeLayout>    -->
+    
+    		<!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line1"-->
+        <!--android:visibility="gone"/>-->
+		  
+    				
+		  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"		
+        android:background="#ffffff"
+        android:clickable="true" 
+        android:visibility="gone">
+
+
+        <TextView
+           	 android:id="@+id/about_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="微信查车:"
+            android:textSize="14dp" />
+        
+                <TextView
+           	 android:id="@+id/about_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="谷米汽车在线"
+            android:textSize="14dp"        
+            android:layout_toRightOf="@id/about_text4"/>
+    </RelativeLayout>   
+    
+		      		<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+		     
+		     		  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"		
+        android:background="#ffffff"
+        android:clickable="true" 
+        android:visibility="gone">
+
+
+        <TextView
+           	 android:id="@+id/about_text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="Alias:"
+            android:textSize="14dp" />
+        
+                <TextView
+           	 android:id="@+id/about_alias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="48219874"
+            android:textSize="14dp"        
+            android:layout_toRightOf="@id/about_text5"/>
+    </RelativeLayout>    
+    <!-- -->
+		  <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line1"-->
+        <!--android:visibility="gone"/>-->
+		     		
+		  <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"		-->
+        <!--android:background="#ffffff"-->
+        <!--android:clickable="true" >-->
+
+
+        <!--<TextView-->
+           	 <!--android:id="@+id/about_text6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:text="电子邮箱:"-->
+            <!--android:textSize="14dp" />-->
+        <!-- -->
+                <!--<TextView-->
+           	 <!--android:id="@+id/about_email"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:text="service@anzertech.com"-->
+            <!--android:textSize="14dp"        -->
+            <!--android:layout_toRightOf="@id/about_text6"-->
+            <!--android:autoLink="email"/>-->
+    <!--</RelativeLayout>	-->
+    
+		  <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/line1"-->
+        <!--android:visibility="visible"/>-->
+		  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"		
+        android:background="#ffffff"
+        android:clickable="true" >
+
+
+        <TextView
+           	 android:id="@+id/about_text7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="官方网站:"
+            android:textSize="14dp" />
+        
+                <TextView
+           	 android:id="@+id/about_web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="www.chetxt.com"
+            android:textSize="14dp"        
+            android:layout_toRightOf="@id/about_text7"
+            android:autoLink="web"/>"
+    </RelativeLayout>    		
+</LinearLayout>

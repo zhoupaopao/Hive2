@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/root_main4"
+    android:layout_height="match_parent">
+    <include layout="@layout/title2"
+        android:id="@+id/title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView6"
+            android:src="@mipmap/icon_screenfull"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/message"
+        android:layout_gravity="center_horizontal"
+
+       >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="该围栏绑定的设备"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/textView56" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/listView6" />
+
+    </LinearLayout>
+
+    <TextView
+        android:background="@color/title"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="绑定新设备"
+        android:id="@+id/textView55"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

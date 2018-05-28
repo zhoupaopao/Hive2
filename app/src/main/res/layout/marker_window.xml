@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icons_txtbg_tr"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10.0dip"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip"
+    android:paddingTop="10.0dip" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+            android:id="@+id/icon_EqpName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+        android:text=""/>
+
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/icon_BL"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:text=""/>-->
+        <ImageButton
+            android:id="@+id/icon_close"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/map_closebutton"
+            android:background="#00000000"
+            android:layout_gravity="center_vertical"/>
+        
+    </LinearLayout>
+
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+   
+            android:text="设备名:"/>
+      <TextView 
+           android:id="@+id/icon_SBM"
+           android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:text=""/>
+</LinearLayout>
+         <!--<LinearLayout-->
+             <!--android:layout_width="0dp"-->
+             <!--android:layout_weight="1"-->
+             <!--android:layout_height="wrap_content"-->
+             <!--android:orientation="horizontal">-->
+      <!--<TextView-->
+            <!--android:id="@+id/icon_DL1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:singleLine="true"-->
+
+            <!--android:text="电量:"/>-->
+
+             <!--<TextView-->
+                 <!--android:id="@+id/icon_DL"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:singleLine="true"-->
+                 <!--android:text=""-->
+                 <!--android:textColor="#ffffff"-->
+                 <!--android:textSize="13dp" />-->
+         <!--</LinearLayout>-->
+         <View android:layout_width="18dp"
+             android:layout_height="18dp">
+             </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+
+                android:text="借款人:"/>
+            <TextView
+                android:id="@+id/icon_PledgerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+                android:text=""/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/icon_DL1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:textColor="#ffffff"
+                android:singleLine="true"
+
+                android:text="电量:"/>
+
+            <TextView
+                android:id="@+id/icon_DL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="11dp" />
+            <!--<TextView-->
+                <!--android:id="@+id/icon_BS1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:singleLine="true"-->
+
+                <!--android:text="插拔:"/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/icon_BS"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:singleLine="true"-->
+                <!--android:text="正常"/>-->
+        </LinearLayout>
+        <View android:layout_width="18dp"
+            android:layout_height="18dp">
+        </View>
+    </LinearLayout>
+    
+      <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:id="@+id/icon_speed1"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+
+            android:text="状态:"/>
+      <TextView
+           android:id="@+id/icon_speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:text="静止"/>
+        </LinearLayout>
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1">
+              <TextView
+
+                  android:id="@+id/icon_acc71"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="11dp"
+                  android:textColor="#ffffff"
+                  android:singleLine="true"
+                  android:text="今日里程:"/>
+              <TextView
+                  android:id="@+id/icon_acc7"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="11dp"
+                  android:textColor="#ffffff"
+                  android:singleLine="true"
+                  android:layout_weight="1"
+                  android:text="10米"/>
+          </LinearLayout>
+          <View android:layout_width="18dp"
+              android:layout_height="18dp">
+          </View>
+    </LinearLayout>
+  
+
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+         <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/icon_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:text="定位类型:"/>
+      <TextView 
+           android:id="@+id/icon_type"
+              android:layout_width="wrap_content"
+           android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+  
+            android:text="定位类型"/>
+             </LinearLayout>
+         <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content">
+         <TextView
+
+             android:id="@+id/icon_acc111"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="11dp"
+             android:textColor="#ffffff"
+             android:singleLine="true"
+             android:text="是否追踪:"/>
+         <TextView
+             android:id="@+id/icon_acc1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="11dp"
+             android:textColor="#ffffff"
+             android:singleLine="true"
+             android:layout_weight="1"
+             android:text="追踪"/>
+    </LinearLayout>
+         <View android:layout_width="18dp"
+             android:layout_height="18dp">
+         </View>
+    </LinearLayout>
+    
+
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          >
+        <TextView
+            android:id="@+id/icon_acc11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:text="设备类型:"/>
+      <TextView
+           android:id="@+id/icon_acc"
+              android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+          android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:text="设备类型"/>
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          >
+      <TextView
+
+          android:id="@+id/icon_acc21"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="11dp"
+          android:textColor="#ffffff"
+          android:singleLine="true"
+          android:text="是否绑车:"/>
+      <TextView
+          android:id="@+id/icon_acc2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+
+          android:textSize="11dp"
+          android:layout_weight="1"
+          android:textColor="#ffffff"
+          android:singleLine="true"
+          android:text="设备类型"/>
+          </LinearLayout>
+      <View android:layout_width="18dp"
+          android:layout_height="18dp">
+      </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+
+            android:text="时间:"/>
+        <TextView
+            android:id="@+id/icon_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:text="2015/08/29 10:12:23"/>
+
+
+    </LinearLayout>
+  <LinearLayout 
+      	android:id="@+id/icon_turnto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView 
+           
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"          
+            android:ellipsize="end"
+            android:text="位置:"/>
+      <TextView 
+           		android:id="@+id/icon_address"
+              android:layout_width="200dp"          
+            android:layout_height="wrap_content"
+            android:textSize="11dp"
+            android:textColor="#ffffff"
+           	android:lines="2" 
+            android:text="江苏省.苏州市.吴江区.3111111111111111111"/>
+        <ImageView
+            android:id="@+id/right_info"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+
+            android:src="@mipmap/icon_right_infowindow"
+            android:background="#00000000"
+            android:layout_gravity="center_vertical"
+           />
+    </LinearLayout>
+    
+ 
+  <TextView 
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#ffffff"/>
+   <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      	android:weightSum="3"
+        android:orientation="horizontal"
+       >
+        <TextView 
+           	android:id="@+id/icon_GetTrackInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="车辆追踪"/>
+        <TextView 
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"/>
+        <TextView 
+           	android:id="@+id/icon_Response_GPS_Replay"
+             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="历史回放"/>
+           <TextView 
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"/>
+           <TextView 
+           	android:id="@+id/icon_carsetting"
+           android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="13dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:text="详情"/>
+        
+    </LinearLayout>
+   
+</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_BS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+</FrameLayout>

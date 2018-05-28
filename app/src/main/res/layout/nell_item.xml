@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/choose"
+        android:layout_height="75dp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_gravity="center"
+                android:text="设备号：2823796681"
+                android:id="@+id/textView29"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="有线"
+                android:id="@+id/textView30"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="A0C810/万高朋/浙A8A123222222222222222222222222222"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:id="@+id/message1"/>
+            <!--万高朋/浙A8A123/A0C810-->
+
+    </LinearLayout>
+
+</LinearLayout>

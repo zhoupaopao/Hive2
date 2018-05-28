@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    tools:context="com.hivee2.mvp.ui.mvpactivity.LoginActivity">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="79dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/bg_login_top"
+        android:imeOptions="actionNext"
+        android:textColorHint="#c1c1c1"
+        android:textColor="#ffffff"
+        android:hint="请输入登录账号"
+        android:paddingLeft="80dp"
+        android:textSize="16dp"
+
+        android:layout_alignParentTop="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/bg_login_bottom"
+        android:imeOptions="actionNext"
+        android:textColorHint="#c1c1c1"
+        android:textColor="#ffffff"
+        android:hint="请输入登录密码"
+        android:paddingLeft="80dp"
+        android:textSize="16dp"
+        android:password="true"/>
+
+    <LinearLayout
+        android:id="@+id/checklayout"
+        android:layout_below="@id/password"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:weightSum="2">
+
+        <CheckBox
+            android:id="@+id/rememberpwd"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|left"
+            android:text="记住密码"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/autologin"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical|left"
+            android:gravity="center_vertical|left"
+            android:text="自动登录"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/checklayout"
+        android:background="@mipmap/btn_login"
+        android:gravity="center"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="登录"
+        android:textSize="16dp"
+        android:textColor="#ffffff"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4F6CB9"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#4F6CB9"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

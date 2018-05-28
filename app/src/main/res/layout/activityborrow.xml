@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title2"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:drawSelectorOnTop="false"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/spinner22"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:paddingRight="10dp">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_type"
+                android:paddingLeft="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:text="借款人"/>
+            <TextView
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text=">"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="7"
+            android:background="@mipmap/input"
+            android:weightSum="1">
+            <EditText
+                android:id="@+id/childac_search1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:singleLine="true"
+
+                android:drawableLeft="@mipmap/search"
+                android:iconifiedByDefault="false"
+                android:hint="搜索"
+                android:background="@color/white"
+                android:imeOptions="actionSearch"
+                android:drawablePadding="5dp"
+                android:paddingLeft="7dp"
+                android:textSize="14dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <com.hivee2.adapter.ListViewCompat
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff4f7f9"
+        android:cacheColorHint="#00000000"
+        android:divider="#dddbdb"
+        android:dividerHeight="1.0px"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </com.hivee2.adapter.ListViewCompat>
+</LinearLayout>

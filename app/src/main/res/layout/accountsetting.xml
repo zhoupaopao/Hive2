@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hivee2.mvp.ui.AccountSetting">
+    
+    <include layout="@layout/title2" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="当前账户"
+        android:id="@+id/textView35"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:background="#f1f1f1"
+        />
+    <include layout="@layout/accountsetlist"
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="子账户"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:background="#f1f1f1"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f1f1f1"
+        android:id="@+id/listView" />
+
+
+</LinearLayout>

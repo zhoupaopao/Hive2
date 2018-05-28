@@ -1,0 +1,199 @@
+<com.hivee2.widget.dragLayout.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    >
+    <!--下层 左边的布局-->
+    <include layout="@layout/left_view_layout"/>
+    <!--上层 右边的主布局-->
+    <com.hivee2.widget.dragLayout.CustomRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/common_top_bar_layout"
+            android:id="@+id/hp_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+            <LinearLayout
+                android:id="@+id/hp_map_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/hp_title"
+                android:orientation="vertical">
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+                </com.baidu.mapapi.map.MapView>
+                <ImageView
+                    android:id="@+id/map_imagView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:src="@mipmap/bg"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/hp_map_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/map_btnleft"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="-10dp"
+                />
+            <ImageView
+                android:id="@+id/hp_map_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/map_btnright"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="-10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:background="#AAffffff"
+                android:layout_alignTop="@+id/hp_map_linear"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/search"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:src="@mipmap/search"
+
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center_vertical"
+                    android:text="通过“设备号/车牌/借款人”搜索车辆"
+                    android:id="@+id/textView10" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="140dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_alignTop="@+id/hp_map_linear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView18"
+                    android:src="@mipmap/nav_more2_normal"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_gravity="right" />
+                <ImageView
+                    android:layout_alignTop="@+id/hp_map_linear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView19"
+                    android:src="@mipmap/location3_normal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_gravity="right" />
+                <ImageView
+                    android:layout_alignTop="@+id/hp_map_linear"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView20"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/hei3"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_gravity="right" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+
+
+
+                <ImageView
+                    android:layout_alignTop="@+id/hp_map_linear"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/imageView22"
+                    android:src="@mipmap/big"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="right" />
+                <ImageView
+                    android:layout_alignTop="@+id/hp_map_linear"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:id="@+id/imageView21"
+                    android:layout_marginTop="11dp"
+                    android:src="@mipmap/small"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_gravity="right" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="此设备可能被拆除"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/Red"
+            android:id="@+id/showstatus"
+            android:layout_below="@+id/imageView6"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"
+            android:layout_marginBottom="10dp"/>
+    </com.hivee2.widget.dragLayout.CustomRelativeLayout>
+</com.hivee2.widget.dragLayout.DragLayout>

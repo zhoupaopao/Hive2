@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:weightSum="1">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/input"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/childac_search1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+
+            android:drawableLeft="@mipmap/search"
+            android:iconifiedByDefault="false"
+            android:hint="搜索"
+            android:background="@color/white"
+            android:imeOptions="actionSearch"
+            android:drawablePadding="5dp"
+            android:paddingLeft="7dp"
+            android:textSize="14dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

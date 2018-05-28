@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/root_main4"
+    android:layout_height="match_parent">
+    <include layout="@layout/title3"
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:layout_weight="0"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView5"
+            android:src="@mipmap/nav_map_load_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView6"
+            android:src="@mipmap/nav_more2_normal"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/imageView5"
+            android:layout_alignLeft="@+id/imageView5" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView4"
+            android:layout_above="@+id/imageView6"
+            android:layout_alignLeft="@+id/imageView5"
+            android:src="@mipmap/navigation_normal"
+            android:layout_marginBottom="10dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView3"
+            android:layout_above="@+id/imageView4"
+            android:layout_alignLeft="@+id/imageView5"
+            android:src="@mipmap/location3_normal"
+            android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="距离下一次刷新还有n秒"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="#ff6666"
+            android:id="@+id/textView26"
+            android:layout_below="@+id/imageView6"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="@color/lv_click_color1"
+            android:textColor="@color/gray"
+            android:text="杭州工商大学，距离这100米"
+            android:id="@+id/textView27"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+           />
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="此设备可能被拆除"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/Red"
+            android:id="@+id/showstatuss"
+            android:layout_below="@+id/textView27"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"/>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dip"
+        android:id="@+id/zhui"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="42dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="开启追踪"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/textView25"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/title"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="42dip"
+            android:background="@color/white"
+            android:layout_weight="0"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="42dip"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="开启追踪"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/textView222"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/title"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>

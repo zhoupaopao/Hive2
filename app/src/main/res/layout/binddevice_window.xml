@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="#36000000"
+    android:gravity="bottom">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+    >
+        <include layout="@layout/searchtwo"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView8" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+        <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="0dp"
+            android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:text="取消" />
+        <View android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray1"/>
+        <Button
+            android:id="@+id/btn_cancle2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:text="保存" />
+    </LinearLayout>
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:padding="1dp">-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_cancle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="8dp"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:background="@color/white"-->
+            <!--android:text="关闭" />-->
+        <!-- -->
+    <!--</RelativeLayout>-->
+</LinearLayout>

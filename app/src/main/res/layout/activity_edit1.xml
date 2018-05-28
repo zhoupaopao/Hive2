@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/horizontalScrollView"
+        android:layout_gravity="center_horizontal" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="车牌号：      "
+                    android:id="@+id/textView" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="车牌号"
+                    android:id="@+id/editText" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/Red"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="*" />
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="车架号："
+                    android:id="@+id/textView1" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="输入17位VIN码"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:maxLength="17"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/editText1" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/label"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="车辆类型：  "
+                    />
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false"
+                    android:visibility="gone"
+                    />
+                <!--<item-->
+                    <!--android:id="@+id/action_settings"-->
+                    <!--android:orderInCategory="100"-->
+                    <!--android:title="@string/action_settings"/>-->
+
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/label3"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="车辆品牌：  "
+                    />
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false"
+                    />
+                <TextView
+                    android:id="@+id/tv_spinner3"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false" />
+                <!--<item-->
+                <!--android:id="@+id/action_settings"-->
+                <!--android:orderInCategory="100"-->
+                <!--android:title="@string/action_settings"/>-->
+
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+                android:layout_height="47dp"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:id="@+id/label1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="80dp"
+                android:layout_marginLeft="8dp"
+                android:layout_height="20dp"
+               android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:text="车辆型号:"
+                />
+            <TextView
+                android:id="@+id/label4"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="20dp"
+                android:hint="请在下面下拉单中选择"
+                />
+        </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="80dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/label5"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="                      "
+                    />
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false"
+                    />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_marginLeft="80dp"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_marginLeft="80dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:drawSelectorOnTop="false"
+                    />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="8dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="颜色：         "
+                    android:id="@+id/textView11" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_gravity="center"
+                    android:hint="车辆颜色描述"
+                    android:background="@color/white"
+                    android:id="@+id/editText11" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="使用年限： "
+                    android:id="@+id/textView9" />
+                <EditText
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="已使用年限"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:id="@+id/editText9" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="8dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="借款金额： "
+                    android:id="@+id/textView8" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_gravity="center"
+                    android:hint="借款金额"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:id="@+id/editText8" />
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="里程数：     "
+                android:id="@+id/textView7" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:hint="行驶里程数"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:inputType="number"
+                android:id="@+id/editText17" />
+        </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="开始日期：   "
+                    android:id="@+id/textView6" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/st_clear_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    android:clickable="true" >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_right" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:hint="借款开始日期"
+                        android:id="@+id/textView21"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray1"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="80dp"
+                    android:background="@color/white"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="8dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="结束日期：   "
+                        android:id="@+id/textView5" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/st_clear_Layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ffffff"
+                    android:clickable="true" >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/icon_right" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:hint="借款结束日期"
+                        android:id="@+id/textView22"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

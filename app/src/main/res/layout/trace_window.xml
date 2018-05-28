@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    android:orientation="vertical"
+    android:background="#36000000"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ttt"
+        android:layout_marginTop="120dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+    >
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:text="追踪模式"/>
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray1"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/white"
+            android:layout_gravity="right">
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="开启一般追踪模式（5分钟定位，耗电较快）"
+                    android:id="@+id/radioButton3" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="开启快速追踪模式（1分钟定位，耗电非常快）"
+                    android:id="@+id/radioButton4" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray1"/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray1"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:text="取消"
+                android:id="@+id/textView5" />
+            <View android:layout_width="0.1dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/gray1"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/title"
+                android:id="@+id/textView6" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    //修改解决sdk问题
+          sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+
+        }
+
+    }
+    defaultConfig {
+        applicationId "com.hivee2"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 33
+        versionName "2.9.4.1"
+
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+//                50e56bdaa7c6bdaddc1da486
+                JPUSH_APPKEY : "ed76206f963a01033eb4c667", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    //    compile 'cn.jiguang:jpush:2.1.9'  // 此处以SDK 2.1.8版本为例
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile 'com.joanzapata.android:base-adapter-helper:1.1.11'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'cn.finalteam:okhttpfinal:2.0.7'
+    compile files('libs/zhy_treeview.jar')
+    //    compile 'cn.jiguang:jpush:2.1.8'  // 此处以SDK 2.1.8版本为例
+    compile files('libs/pgyer_sdk_2.5.6.jar')
+    compile files('libs/janalytics-android-1.1.2.jar')
+    compile files('libs/jcore-android-1.1.7.jar')
+    compile files('libs/jpush-android-3.0.9.jar')
+    compile files('libs/umeng-analytics-v6.1.2.jar')
+    compile files('libs/utdid4all-1.0.4.jar')
+    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    compile 'com.lzy.widget:imagepicker:0.5.4'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+}

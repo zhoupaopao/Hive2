@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/hp_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/title"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/hp_imgbtn"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+
+            android:background="@drawable/leftmenu_btn_selector" />
+
+        <TextView
+            android:id="@+id/childaccount_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="英臻车联"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/childaccount_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          
+            android:text="账户名"
+            android:textColor="@android:color/white"
+            android:textSize="9dp"
+            android:gravity="center_vertical"
+            android:maxEms="4"
+            android:singleLine="true"
+            android:layout_alignBottom="@+id/hp_alert"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:id="@+id/hp_alert"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/map_alert"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    
+    
+   
+    
+      <com.baidu.mapapi.map.MapView  
+    android:id="@+id/bmapView"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent" 
+    android:clickable="true" 
+    android:layout_below="@id/hp_title"/>
+
+
+       <ImageButton 
+        android:id="@+id/nav_more"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/bmapView"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/nav_more2_normal"
+        android:scaleType="fitXY"
+        android:background="#00ffffff"
+        android:layout_below="@id/hp_title"/>
+       
+       <ImageButton 
+        android:id="@+id/nav_map_load"
+        android:layout_width="40dp"
+        android:layout_height="40dp"       
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_num"
+        android:scaleType="fitXY"
+        android:background="#00ffffff"
+        android:layout_below="@id/nav_more"/>
+            
+       <ImageButton 
+        android:id="@+id/location_press"
+        android:layout_width="40dp"
+        android:layout_height="40dp"       
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/hp_carlist"
+        android:scaleType="fitXY"
+        android:background="#00ffffff"
+        android:layout_below="@id/nav_map_load"/>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignTop="@+id/bmapView"
+           android:layout_alignBottom="@+id/bmapView">
+
+       <ImageButton
+        android:id="@+id/map_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/map_btnright"
+        android:background="#00000000"
+        android:layout_marginRight="-10dp"
+        android:layout_centerVertical="true"/>
+       <ImageButton
+        android:id="@+id/map_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/map_btnleft"
+        android:background="#00000000"
+        android:layout_marginLeft="-10dp"
+        android:layout_centerVertical="true"/>
+       </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/gray2"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="设置车辆显示的信息字段"
+        android:id="@+id/textView69"
+        android:layout_gravity="center_horizontal" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="行驶状态"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView70" />
+        <CheckBox
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7.5dp"
+        android:id="@+id/checkBox"
+        />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="设备类型"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView71" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox1"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="插拔"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView72" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox2"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="电量"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView73" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox3"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="是否绑车"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView74" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox4"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="今日里程"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView75" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox5"
+            />
+    </LinearLayout>    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="是否开启追踪"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView76" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox6"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="定位类型"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/textView77" />
+        <CheckBox
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="@color/title"
+            android:layout_marginTop="7dp"
+            android:id="@+id/checkBox7"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
