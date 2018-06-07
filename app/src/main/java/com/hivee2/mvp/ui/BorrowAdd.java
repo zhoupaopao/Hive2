@@ -88,12 +88,12 @@ public class BorrowAdd extends Activity implements HttpCycleContext {
             new1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    pledgerName1=pledgerName.getText().toString();
-                    idCardNumber1=idCardNumber.getText().toString();
-                    contactPhone1=contactPhone.getText().toString();
-                    address1=address.getText().toString();
-                    contactName1=contactName.getText().toString();
-                    remak1=remak.getText().toString();
+                    pledgerName1=pledgerName.getText().toString().trim();
+                    idCardNumber1=idCardNumber.getText().toString().trim();
+                    contactPhone1=contactPhone.getText().toString().trim();
+                    address1=address.getText().toString().trim();
+                    contactName1=contactName.getText().toString().trim();
+                    remak1=remak.getText().toString().trim();
                     if (pledgerName1.equals(""))
                     {
                         Toast.makeText(getApplicationContext(), "姓名必须输入!", Toast.LENGTH_SHORT).show();

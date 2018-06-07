@@ -776,14 +776,14 @@ if(money1.getText().toString().equals(""))
         params.addFormDataPart("userID",userid);
         params.addFormDataPart("carInfo",message);
         params.addFormDataPart("tokenString", token);
-
+        Log.i("information: ", Api.MODIFY_CARINFO+"?userID="+userid+"&carInfo="+message+"&tokenString="+token);
         HttpRequest.post(Api.MODIFY_CARINFO, params, new JsonHttpRequestCallback() {
             @Override
             protected void onSuccess(Headers headers, JSONObject jsonObject) {
                 super.onSuccess(headers, jsonObject);
 //                AddCar addCar = JSONObject.parseObject(jsonObject.toString(), AddCar.class);
 
-                Log.e("CHENGGONG", "CHEGNGONG");
+                Log.e("CHENGGONG", jsonObject.toString());
                     finish();
 
             }

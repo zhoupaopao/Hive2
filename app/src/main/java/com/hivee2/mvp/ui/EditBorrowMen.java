@@ -203,7 +203,8 @@ public class EditBorrowMen extends Activity implements HttpCycleContext {
                + '"' + "Remark" + '"' + ":" + '"' + remak1 + '"' + ","
                 + '"' + "Address" + '"' + ":" + '"' + address1 + '"' + "," + '"' + "ContactName" + '"'
                 + ":" + '"' + contactName1 + '"' + "," + '"' + "ContactPhone" + '"'
-                + ":" +'"'+ contactPhone1+'"' + "}";
+                + ":" +'"'+ contactPhone1+'"'+ ","
+            + '"' + "adcode" + '"' + ":"+ '"'+'"'+"}";
         Log.e("oooooo",message);
         Log.e("oooooo",token);
         RequestParams params = new RequestParams(EditBorrowMen.this);
@@ -214,11 +215,16 @@ public class EditBorrowMen extends Activity implements HttpCycleContext {
             protected void onSuccess(Headers headers, JSONObject jsonObject) {
                 super.onSuccess(headers, jsonObject);
                 BaseApiResponse modifyBean = JSONObject.parseObject(jsonObject.toString(), BaseApiResponse.class);
+                if(modifyBean.getResult()!=0){
+                    Toast.makeText(EditBorrowMen.this,modifyBean.getErrorMsg(),Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(EditBorrowMen.this, BorrowDetail.class);
+                    intent.putExtra("PledgerName",pledgerName1);
+                    Log.e("UU",pledgerName1);
+                    finish();
+                }
                 Log.e("dbdPLED", jsonObject.toString() );
-                Intent intent = new Intent(EditBorrowMen.this, BorrowDetail.class);
-                intent.putExtra("PledgerName",pledgerName1);
-                Log.e("UU",pledgerName1);
-                finish();
+
             }
 
             @Override
