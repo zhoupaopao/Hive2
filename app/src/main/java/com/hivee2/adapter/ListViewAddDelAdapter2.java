@@ -117,10 +117,13 @@ public class ListViewAddDelAdapter2 extends BaseAdapter {
                             @Override
                             protected void onSuccess(Headers headers, JSONObject jsonObject) {
                                 super.onSuccess(headers, jsonObject);
+                                Log.i("onSuccess: ", jsonObject.toString());
                                 BaseApiResponse cardevice = JSONObject.parseObject(jsonObject.toString(), BaseApiResponse.class);
                                 if (cardevice.getResult() == 0) {
-                                    Toast.makeText(context, "删除成功！", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(context, "解绑成功！", Toast.LENGTH_SHORT).show();
                                     context.del(position);
+                                }else{
+                                    Toast.makeText(context, "解绑失败！", Toast.LENGTH_SHORT).show();
                                 }
                             }
 

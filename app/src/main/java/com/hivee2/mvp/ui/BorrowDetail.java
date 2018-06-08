@@ -650,10 +650,13 @@ public class BorrowDetail extends Activity implements HttpCycleContext {
                                 @Override
                                 protected void onSuccess(Headers headers, JSONObject jsonObject) {
                                     super.onSuccess(headers, jsonObject);
+                                    Log.i("onSuccess: ", jsonObject.toString());
                                     BaseApiResponse cardevice = JSONObject.parseObject(jsonObject.toString(), BaseApiResponse.class);
                                     if (cardevice.getResult() == 0) {
                                         finish();
                                         Toast.makeText(BorrowDetail.this, "解绑成功！", Toast.LENGTH_SHORT).show();
+                                    }else{
+                                        Toast.makeText(BorrowDetail.this, "解绑失败！", Toast.LENGTH_SHORT).show();
                                     }
                                 }
 
