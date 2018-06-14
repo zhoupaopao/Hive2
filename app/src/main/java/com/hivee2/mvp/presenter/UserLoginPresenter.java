@@ -40,8 +40,8 @@ public class UserLoginPresenter extends BasePresenter<IUserLoginView>{
         mView.showLoading();
 
         RequestParams params = new RequestParams(mView);
-        params.addFormDataPart("userName", mView.getUserName());
-        params.addFormDataPart("password", mView.getPassword());
+        params.addFormDataPart("username", mView.getUserName());
+        params.addFormDataPart("pwd", mView.getPassword());
         userBiz.login(params,new JsonHttpRequestCallback(){
             @Override
             protected void onSuccess(Headers headers, JSONObject jsonObject) {
@@ -109,7 +109,7 @@ public class UserLoginPresenter extends BasePresenter<IUserLoginView>{
         editor.putString("check3","false");
         editor.putString(Constant.sp_queryString,"");
         editor.putInt(Constant.sp_page, 1);
-        editor.putString(Constant.sp_userId, userBean.getUserID());
+        editor.putString(Constant.sp_userId, userBean.getLinkUser());
         editor.putString(Constant.sp_login_userId, userBean.getUserID());
 
         editor.putString(Constant.sp_parentId, userBean.getUserID());

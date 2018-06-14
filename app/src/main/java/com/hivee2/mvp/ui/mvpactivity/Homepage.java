@@ -556,12 +556,12 @@ public class Homepage extends BaseMvpActivity<IHomepageView,HomepagePresenter> i
     private void OrderManager() {
         //获取工单管理显示
         RequestParams params=new RequestParams();
-        String userid=sp.getString(Constant.sp_userId,"");
+        String userid=sp.getString(Constant.sp_login_userId,"");
         String token=sp.getString(Constant.sp_token,"");
         String paramss = "{userid:'"+userid+"',tokenstring:'" + token + "'}";
         Log.i("paramss", paramss);
         params.addFormDataPart("param",paramss);
-        Log.i("api", Api.GETROLEBYUSERID);
+        Log.i("api", Api.GETROLEBYUSERID+"?param="+paramss);
         HttpRequest.post(Api.GETROLEBYUSERID,params,new JsonHttpRequestCallback(){
             @Override
             protected void onSuccess(Headers headers, JSONObject jsonObject) {

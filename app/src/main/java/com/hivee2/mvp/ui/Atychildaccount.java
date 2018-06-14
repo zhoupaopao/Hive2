@@ -125,7 +125,7 @@ public class Atychildaccount extends Activity implements HttpCycleContext {
                 userid=useridStr;
                 customer=customerStr;
                 RequestParams params = new RequestParams(Atychildaccount.this);
-                params.addFormDataPart("userID",login_userid);
+                params.addFormDataPart("userID",userid);
                 params.addFormDataPart("tokenString",token);
                 //  地址  参数  回调函数
                 Log.e("1222-------->", login_userid + "");
@@ -134,7 +134,7 @@ public class Atychildaccount extends Activity implements HttpCycleContext {
                     @Override
                     protected void onSuccess(Headers headers, JSONObject jsonObject) {
                         super.onSuccess(headers, jsonObject);
-                        Log.e("-1222-------->", Api.GET_SON_USER_TOKEN+"---"+userid+"-----"+token);
+                        Log.e("-1222-------->", Api.GET_SON_USER_TOKEN+"?userID="+userid+"&tokenString="+token);
                         Log.e("-1222-------->", jsonObject.toString());
 
                        TokenBean tokenBean = JSONObject.parseObject(jsonObject.toString(), TokenBean.class);
@@ -177,7 +177,7 @@ public class Atychildaccount extends Activity implements HttpCycleContext {
                         editor.putString("message",message);
                         editor.commit();
                         Constant.atychildaccoumt=true;
-                        OrderManager(userid);
+                        OrderManager(login_userid);
 
 
                     }
@@ -227,6 +227,7 @@ public class Atychildaccount extends Activity implements HttpCycleContext {
         String paramss = "{userid:'"+userid1+"',tokenstring:'" + token + "'}";
         Log.i("paramss", paramss);
         params.addFormDataPart("param",paramss);
+        Log.i("api", Api.GETROLEBYUSERID+"?param="+paramss);
         HttpRequest.post(Api.GETROLEBYUSERID,params,new JsonHttpRequestCallback(){
             @Override
             protected void onSuccess(Headers headers, JSONObject jsonObject) {
@@ -573,9 +574,7 @@ public class Atychildaccount extends Activity implements HttpCycleContext {
         params.addFormDataPart("UserID",parentid);
         params.addFormDataPart("TokenString", token);
         //  地址  参数  回调函数
-        Log.e("1222-------->", userid + "");
-        Log.e("1222-------->", token + "");
-        Log.e("1222-------->", Api.GET_RECURSIVE + "");
+        Log.e("1222-------->", Api.GET_RECURSIVE + "?UserID="+parentid+"&TokenString="+token);
         mTree = (ListView) findViewById(R.id.ac_listview);
         HttpRequest.post(Api.GET_RECURSIVE, params, new JsonHttpRequestCallback() {
             @Override

@@ -451,10 +451,11 @@ public class ChooseaAccountActivity extends Activity implements HttpCycleContext
 //            }
 //        });
         RequestParams params = new RequestParams(ChooseaAccountActivity.this);
-        params.addFormDataPart("UserID",userid);
+        String useriddd=sp.getString(Constant.sp_login_userId,"");
+        params.addFormDataPart("UserID",useriddd);
         params.addFormDataPart("TokenString", token);
         //  地址  参数  回调函数
-        Log.i("initDatas", Api.GET_CHILD_TREE+"?UserID="+userid+"&TokenString="+token);
+        Log.i("initDatas", Api.GET_CHILD_TREE+"?UserID="+useriddd+"&TokenString="+token);
         mTree = (ListView) findViewById(R.id.ac_listview);
         HttpRequest.post(Api.GET_CHILD_TREE, params, new JsonHttpRequestCallback() {
             @Override

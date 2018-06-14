@@ -12,7 +12,7 @@ public class LoginBean  implements Serializable {
     private String UserID;
     private String UserName;
     private String Token;
-
+    private String LinkUser;
 
     private ServerBean Server;
     /**
@@ -30,6 +30,14 @@ public class LoginBean  implements Serializable {
     private ResponseCustomerBean Response_Customer;
     private int Result;
     private Object ErrorMsg;
+
+    public String getLinkUser() {
+        return LinkUser;
+    }
+
+    public void setLinkUser(String linkUser) {
+        LinkUser = linkUser;
+    }
 
     public String getUserID() {
         return UserID;

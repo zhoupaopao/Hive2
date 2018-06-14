@@ -11,6 +11,6 @@ public class UserBiz implements IUserBiz {
     @Override
     public void login(RequestParams params, final JsonHttpRequestCallback jsonHttpRequestCallback) {
 
-        HttpRequest.post(Api.LOGIN, params, jsonHttpRequestCallback);
+        HttpRequest.get(Api.LOGIN, params, jsonHttpRequestCallback);
     }
 }
