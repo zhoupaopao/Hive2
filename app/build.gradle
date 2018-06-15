@@ -16,7 +16,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 35
-        versionName "2.9.5.1"
+        versionName "2.9.6"
 
 
         manifestPlaceholders = [

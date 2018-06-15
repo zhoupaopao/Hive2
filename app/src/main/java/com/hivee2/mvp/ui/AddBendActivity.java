@@ -196,7 +196,7 @@ public class AddBendActivity extends Activity implements HttpCycleContext,ImageP
                 //先进行二押判断
                     RequestParams params = new RequestParams(AddBendActivity.this);
                     params.addFormDataPart("param", message2);
-                    Log.i("新怎",Api.Check_LoanValid+"?userid="+userid+"&pledgername="+PledgerName+"&carnumber="+PledgerID+"&tokenString="+token);
+                    Log.i("新怎",Api.Check_LoanValid+"?param="+message2);
 
                     HttpRequest.post(Api.Check_LoanValid, params, new JsonHttpRequestCallback() {
                         @Override
@@ -303,6 +303,7 @@ public class AddBendActivity extends Activity implements HttpCycleContext,ImageP
         params.addFormDataPart("carInfo",carInfo);
         params.addFormDataPart("tokenString", token);
         params.addFormDataPart("jsoncallback", "");
+        Log.i("ADD_CAR_INFO",Api.ADD_CAR_INFO+"?carInfo="+carInfo+"&tokenString="+token+"&jsoncallback=" );
         HttpRequest.post(Api.ADD_CAR_INFO, params, new JsonHttpRequestCallback() {
             @Override
             protected void onSuccess(Headers headers, JSONObject jsonObject) {

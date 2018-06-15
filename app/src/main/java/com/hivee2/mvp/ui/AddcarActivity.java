@@ -571,9 +571,11 @@ if(money1.getText().toString().equals(""))
 }
 
         Log.e("riq",enddata2);
-        if(platenumber.getText().toString().equals("")){{
+        if(platenumber.getText().toString().equals("")){
             carnumber=frame.getText().toString();
-        }}
+        }else{
+            carnumber=platenumber.getText().toString();
+        }
 
         String message= "{"
                 + '"' + "ID" + '"' + ":" + '"' + '"' + ","
