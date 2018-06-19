@@ -113,6 +113,7 @@ public class ListViewAddDelAdapter2 extends BaseAdapter {
                         RequestParams params = new RequestParams(context);
                         params.addFormDataPart("carDeviceID", aa[2]);
                         params.addFormDataPart("tokenString",sp.getString(Constant.sp_token, ""));
+                        Log.i("onClick: ", Api.SETCAR_UNBIND_DEVICE+"?carDeviceID="+aa[2]+"&tokenString="+sp.getString(Constant.sp_token, ""));
                         HttpRequest.post(Api.SETCAR_UNBIND_DEVICE, params, new JsonHttpRequestCallback() {
                             @Override
                             protected void onSuccess(Headers headers, JSONObject jsonObject) {

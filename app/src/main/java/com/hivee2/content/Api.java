@@ -7,7 +7,8 @@ package com.hivee2.content;
 public class Api {
 //    public static final String LOGIN="http://m1api.chetxt.com:8083/Customer.asmx/Jsonp_GetLogin";
 //public static final String LOGIN="http://118.178.227.126:8083/Customer.asmx/Jsonp_GetLogin";//测试
-    public static final String LOGIN="http://118.178.227.126:8084/api/userinfo/Login";
+//    public static final String LOGIN="http://118.178.227.126:8084/api/userinfo/Login";
+public static final String LOGIN="http://m1api.chetxt.com:8070/api/userinfo/Login";//正式登录接口
     public static final String BASE_API_URL=Constant.BaseUrl;
 //    public static final String BASE_API_URL="http://118.178.227.126:8083/";//测试
     public static final String GET_ALARM_TYPE=BASE_API_URL+"Alarm.asmx/Jsonp_GetAlarmType";
@@ -64,8 +65,8 @@ public static final String Device_List=BASE_API_URL+"Customer.asmx/Jsonp_GetDevi
 public static final String GetDeviceTiming=BASE_API_URL+"Goods.asmx/Jsonp_GetDeviceTiming";
 
 
-    public static final String BASE_CAR_URL="http://118.178.227.126:8082/";
-//    public static final String BASE_CAR_URL="http://erp.chetxt.com:8082/";
+//    public static final String BASE_CAR_URL="http://118.178.227.126:8082/";
+    public static final String BASE_CAR_URL="http://erp.chetxt.com:8082/";
     public static final String GET_CAR_BRANDLIST=BASE_CAR_URL+"RiskService.asmx/Jsonp_GetCarBrandList";
     public static final String GET_CAR_SERIES=BASE_CAR_URL+"RiskService.asmx/Jsonp_GetCarSeriesList";
     public static final String GET_CAR_MODEL=BASE_CAR_URL+"RiskService.asmx/Jsonp_GetCarModelList";
@@ -74,8 +75,8 @@ public static final String GetDeviceTiming=BASE_API_URL+"Goods.asmx/Jsonp_GetDev
 
 //    public static final String BASE_order_URL="http://order.chetxt.com:8090/";//测试接口
 
-//    public static final String BASE_order_URL="http://m1api.chetxt.com:8090/";//正式接口
-    public static final String BASE_order_URL="http://118.178.227.126:8090/";//测试接口
+    public static final String BASE_order_URL="http://m1api.chetxt.com:8090/";//正式接口
+//    public static final String BASE_order_URL="http://118.178.227.126:8090/";//测试接口
     public static final String GET_ORDER_LIST=BASE_order_URL+"v1/vehicleorder/selectlist";
     public static final String GET_SESSION=BASE_order_URL+"v1/vehicleorder/selectSessionByUserId";
     public static final String GET_ORDER_DETAIL=BASE_order_URL+"v1/vehicleorder/selectlistall";
