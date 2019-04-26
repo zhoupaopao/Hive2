@@ -3,9 +3,13 @@ package com.hivee2.mvp.ui;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Intent;
+import android.os.Build;
 
 import com.baidu.mapapi.SDKInitializer;
 import com.hivee2.utils.SharePreferenceUtil;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import cn.finalteam.okhttpfinal.OkHttpFinal;
 import cn.finalteam.okhttpfinal.OkHttpFinalConfiguration;
@@ -27,6 +31,7 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
         JAnalyticsInterface.init( this);
         SDKInitializer.initialize(getApplicationContext());
         SharePreferenceUtil.init(getApplicationContext());
+        disableAPIDialog();
     }
 
 
@@ -48,5 +53,19 @@ public class MyApplication extends Application implements Thread.UncaughtExcepti
             e.printStackTrace();
         }
         return cls;
+    }
+    private void disableAPIDialog(){
+        if (Build.VERSION.SDK_INT < 28)return;
+        try {
+            Class clazz = Class.forName("android.app.ActivityThread");
+            Method currentActivityThread = clazz.getDeclaredMethod("currentActivityThread");
+            currentActivityThread.setAccessible(true);
+            Object activityThread = currentActivityThread.invoke(null);
+            Field mHiddenApiWarningShown = clazz.getDeclaredField("mHiddenApiWarningShown");
+            mHiddenApiWarningShown.setAccessible(true);
+            mHiddenApiWarningShown.setBoolean(activityThread, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

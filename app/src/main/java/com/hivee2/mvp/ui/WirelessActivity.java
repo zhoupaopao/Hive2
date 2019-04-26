@@ -169,7 +169,7 @@ public class WirelessActivity extends Activity implements HttpCycleContext {
         title.setText("闹铃设置");
         sp = this.getSharedPreferences("hive2", MODE_PRIVATE);
         userid = sp.getString(Constant.sp_userId, "");
-        token = sp.getString(Constant.sp_token, "");
+        token = sp.getString(Constant.login_token, "");
         progressDialog = new ProgressDialog(this);
         final Calendar ca = Calendar.getInstance();
         mHour = ca.get(Calendar.HOUR_OF_DAY);

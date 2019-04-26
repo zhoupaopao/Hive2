@@ -116,12 +116,57 @@ public class BorrowDetail extends Activity implements HttpCycleContext {
     private RelativeLayout st_clear_Layout2;
     private ListViewAddDelAdapter2 listViewAddDelAdapter2;
     List<UnbindBean.DataListBean> unbindList  = new ArrayList<UnbindBean.DataListBean>();
+    private boolean canedit=true;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detailborrow);
         intview();
         getinfomation();
+        achievePermission();
         run();
+    }
+
+    private void achievePermission() {
+        RequestParams params = new RequestParams(BorrowDetail.this);
+        String param="{'userid':'"+userid+"','tokenstring':'"+token+"'}";
+        params.addFormDataPart("param", param);
+        Log.i("achievePermission: ", Api.Json_GetCustomerInfoByChildID+"?param="+param);
+        HttpRequest.get(Api.Json_GetCustomerInfoByChildID, params, new JsonHttpRequestCallback() {
+            @Override
+            protected void onSuccess(Headers headers, JSONObject jsonObject) {
+                super.onSuccess(headers, jsonObject);
+                Log.e("--ttt------->", jsonObject.toString());
+                if(jsonObject.getInteger("Result")==0){
+                    //成功
+                    if(jsonObject.getString("userid").equals("90f4ea676cda45a1808f532efc149b73")){
+                        canedit=false;
+                    }
+                }else{
+                    Toast.makeText(BorrowDetail.this,"请求异常",Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int errorCode, String msg) {
+                super.onFailure(errorCode, msg);
+                Log.e("alertMsg failure", errorCode + msg);
+            }
+
+            @Override
+            public void onStart() {
+                super.onStart();
+                progressDialog.setMessage("正在加载");
+                progressDialog.show();
+            }
+
+            @Override
+            public void onFinish() {
+                super.onFinish();
+                if (progressDialog.isShowing() && progressDialog != null) {
+                    progressDialog.dismiss();
+                }
+            }
+        });
     }
 
     private void intview() {
@@ -286,26 +331,37 @@ public class BorrowDetail extends Activity implements HttpCycleContext {
 //                if(Source.equals("2")){
 //                    Toast.makeText(BorrowDetail.this,"该信息来自于工单不可编辑",Toast.LENGTH_SHORT).show();
 //                }else {
+                if(canedit) {
                     Intent intent = new Intent(BorrowDetail.this, EditBorrowMen.class);
                     intent.putExtra("PledgementID", PledgementID);
                     intent.putExtra("Source", Source);
                     startActivity(intent);
+                }else{
+                    Toast.makeText(BorrowDetail.this, "您暂无此权限", Toast.LENGTH_SHORT).show();
+                }
 //                }
             }
         });
        edit.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               //先验证是否有编辑权限
 //               if(Source.equals("2")){
 //                Toast.makeText(BorrowDetail.this,"该信息来自于工单不可编辑",Toast.LENGTH_SHORT).show();
 //               }else{
+               if(canedit){
                    Intent intent = new Intent(BorrowDetail.this, EditcarActivity.class);
                    intent.putExtra("PledgeCarID",PledgeCarID);
                    intent.putExtra("pledgerID", PledgementID);
                    intent.putExtra("PledgerName", PledgerName);
-                    intent.putExtra("Source", Source);
+                   intent.putExtra("Source", Source);
                    Log.i("PledgerName3", PledgerName);
                    startActivity(intent);
+               }else{
+                   Toast.makeText(BorrowDetail.this, "您暂无此权限", Toast.LENGTH_SHORT).show();
+
+               }
+
 //               }
 
            }

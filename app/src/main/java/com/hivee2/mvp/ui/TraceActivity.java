@@ -1345,25 +1345,28 @@ public class TraceActivity extends Activity implements OnGetRoutePlanResultListe
         @Override
         public boolean onMarkerClick(Marker marker) {
             System.out.println("markerclick-->" + marker.getTitle());
+            if(marker.getTitle()!=null){
+                LayoutInflater inflater = LayoutInflater
+                        .from(getApplicationContext());
 
-            LayoutInflater inflater = LayoutInflater
-                    .from(getApplicationContext());
-
-            View linear = inflater.inflate(
-                    R.layout.infowindow_tab_gettrackinfo, null);
-            TextView name = (TextView) linear
-                    .findViewById(R.id.infowindow_tgti_name);
-            TextView address = (TextView) linear
-                    .findViewById(R.id.infowindow_tgti_address);
-            name.setText(marker.getTitle());
-            address.setText(marker.getExtraInfo().getString("poiaddress"));
-            LatLng ll = marker.getPosition();
+                View linear = inflater.inflate(
+                        R.layout.infowindow_tab_gettrackinfo, null);
+                TextView name = (TextView) linear
+                        .findViewById(R.id.infowindow_tgti_name);
+                TextView address = (TextView) linear
+                        .findViewById(R.id.infowindow_tgti_address);
+                name.setText(marker.getTitle());
+                Log.i("onMarkerClick: ", marker.getExtraInfo().toString());
+                address.setText(marker.getExtraInfo().getString("poiaddress"));
+                LatLng ll = marker.getPosition();
 			/*
 			 * view - InfoWindow 展示的 view position - InfoWindow 显示的地理位置 yOffset
 			 * - InfoWindow Y 轴偏移量 listener - InfoWindow 点击监听者
 			 */
-            mInfoWindow = new InfoWindow(linear, ll, -47);
-            mBaiduMap.showInfoWindow(mInfoWindow);
+                mInfoWindow = new InfoWindow(linear, ll, -47);
+                mBaiduMap.showInfoWindow(mInfoWindow);
+            }
+
 
             return true;
         }

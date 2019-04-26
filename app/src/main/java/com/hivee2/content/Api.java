@@ -86,8 +86,8 @@ public static final String GetDeviceTiming=BASE_API_URL+"Goods.asmx/Jsonp_GetDev
     public static final String APP_SELECT_DETAIL=BASE_order_URL+"v1/vehicleorder/appselectByUserId";
 //    //获取省市区
 public static final String APP_GetProvince=BASE_CAR_URL+"order.asmx/Json_GetProvince_City";//城市列表
-
-
+//通过userid获取父id/
+public static final String Json_GetCustomerInfoByChildID=BASE_API_URL+"Customer.asmx/Json_GetCustomerInfoByChildID";
 
 
 }
